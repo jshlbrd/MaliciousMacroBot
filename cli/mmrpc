@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-
+import argparse
 from concurrent import futures
 import json
 import multiprocessing
@@ -8,10 +8,9 @@ import sys
 import time
 
 import grpc
-import mmbot as mmb
-
-import mmbot_pb2
-import mmbot_pb2_grpc
+from mmbot import mmbot as mmb
+from rpc import mmbot_pb2
+from rpc import mmbot_pb2_grpc
 
 
 class MmbotServicer(mmbot_pb2_grpc.MmbotServicer):

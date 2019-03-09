@@ -52,7 +52,7 @@ def main():
 
     if not args.address:
         sys.exit('no address provided')
-    adddress = args.address
+    address = args.address
     threads = args.threads or multiprocessing.cpu_count() * 2
     rpcs = args.rpcs or None
 
